@@ -1,5 +1,10 @@
 <h1>Index Page For All Dogs</h1>
 
+<%= form_tag "/dogs", method: "GET" do %>
+  <%= text_field_tag :search %>
+  <%= submit_tag "Search" %>
+<% end %>
+
 <ul>
   <% @dogs.each do |doggy| %>
     <li>
